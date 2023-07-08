@@ -12,4 +12,8 @@ jobs:
           steps:
             -run: npm install
       - run: npm run test
-      
+      - checkout
+      - node/with-cache:
+          steps:
+            -run: npm install
+      - run: npm run test
